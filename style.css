@@ -14,3 +14,10 @@ th, td {
   padding: 0.6rem;
   border-bottom: 1px solid #3a434a;
 }
+
+@media (max-width: 480px) {
+  th, td {
+    font-size: 0.9rem;
+    padding: 0.4rem;
+  }
+}
