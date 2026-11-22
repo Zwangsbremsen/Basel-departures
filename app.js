@@ -1,5 +1,5 @@
-async function loadDepartures() {
-  const url = "https://transport.opendata.ch/v1/stationboard?station=Basel%20SBB&limit=10";
+async function loadDepartures(station) {
+  const url = "https://transport.opendata.ch/v1/stationboard?station=" + encodeURIComponent(station) + "&limit=10";
   const response = await fetch(url);
   const data = await response.json();
 
@@ -25,4 +25,12 @@ async function loadDepartures() {
   });
 }
 
-loadDepartures();
+const form = document.getElementById("search-form");
+const input = document.getElementById("station-input");
+
+form.addEventListener("submit", function (event) {
+  event.preventDefault();
+  loadDepartures(input.value);
+});
+
+loadDepartures(input.value);
