@@ -1,0 +1,16 @@
+body {
+  font-family: system-ui, sans-serif;
+  background: #1e2327;
+  color: #f2f2f2;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  text-align: left;
+  padding: 0.6rem;
+  border-bottom: 1px solid #3a434a;
+}
