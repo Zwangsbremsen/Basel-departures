@@ -145,3 +145,9 @@ favBtn.addEventListener("click", async function () {
 });
 
 loadFavorites();
+
+document.getElementById("logout-btn").addEventListener("click", async function () {
+  await sendJson("backend/logout.php", {});
+  authStatus.textContent = "Logged out";
+  loadFavorites();
+});

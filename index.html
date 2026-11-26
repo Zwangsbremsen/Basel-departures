@@ -14,18 +14,21 @@
   <input id="station-input" type="text" value="Basel SBB">
   <button type="submit">Find departures</button>
   </form>
+  <button type="button" id="fav-btn" hidden>Save station as favorite</button>
+  <h2>Favorites</h2>
+  <ul id="Favorites"></ul>
 
   <form id="auth-form">
     <input id="email" type="email" placeholder="Email" required>
     <input id="password" type="password" placeholder="Password (min. 8 characters)" required minlength="8">
     <button type="submit">Log in</button>
     <button type="button" id="register-btn">Register</button>
-
+    <button type="button" id="logout-btn">Log out</button>
   </form>
   <button type="button" id="fav-btn" hidden>Save station as favorite</button>
   <h2>Favorites</h2>
   <ul id="Favorites"></ul>
-  
+
   <p id="status"></p>
   <p id="auth-status"></p>
   <table>
