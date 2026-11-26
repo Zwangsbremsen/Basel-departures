@@ -52,3 +52,36 @@ form.addEventListener("submit", function (event) {
 });
 
 loadDepartures(input.value);
+
+async function sendJson(url, body) {
+  const response = await fetch(url, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(body),
+  });
+  const data = await response.json();
+  return { ok: response.ok, data: data };
+}
+
+const authForm = document.getElementById("auth-form");
+const authStatus = document.getElementById("auth-status");
+
+function credentials() {
+  return {
+    email: document.getElementById("email").value,
+    password: document.getElementById("password").value
+  };
+}
+
+authForm.addEventListener("submit", async function (event) {
+  event.preventDefault();
+  const result = await sendJson("backend/login.php", credentials());
+  authStatus.textContent = result.ok ? "Logged in" : result.data.error;
+});
+
+document.getElementById("register-btn").addEventListener("click", async function () {
+  const result = await sendJson("backend/register.php", credentials());
+  authStatus.textContent = result.ok ? "Account created, you can log in now" : result.data.error;
+});
