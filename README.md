@@ -38,7 +38,25 @@ https://zwangsbremsen.github.io/NextTrain-CH/
 - [ ] Favourite stations
 - [ ] PHP + MySQL backend for user accounts
 
+
+## Run the full version locally
+
+Requirements: PHP 8+ and MySQL/MariaDB (for example via XAMPP).
+
+1. Create the database: `mysql -u root < backend/schema.sql`
+2. Start the server from the project folder: `php -S localhost:8080`
+3. Open http://localhost:8080/index.html
+
+## API endpoints
+
+| Method | Endpoint | Description |
+|---|---|---|
+| POST | backend/register.php | Create an account |
+| POST | backend/login.php | Log in (PHP session) |
+| POST | backend/logout.php | Log out |
+| GET / POST / DELETE | backend/favorites.php | List, add or remove favorite stations |
+
 ## Author
 
 Jaime Molina Jiménez – junior web developer and former train driver.
-[LinkedIn](https://linkedin.com/in/jaime-molinajimenez)
+[LinkedIn](www.linkedin.com/in/jaime-molina-jimenez)
