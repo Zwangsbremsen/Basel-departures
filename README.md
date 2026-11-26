@@ -58,4 +58,5 @@ Requirements: PHP 8+ and MySQL/MariaDB (for example via XAMPP).
 ## Author
 
 Jaime Molina Jiménez – junior web developer and former train driver.
-[LinkedIn](https://linkedin.com/in/jaime-molinajimenez)
+www.linkedin.com/in/jaime-molina-jimenez
+
